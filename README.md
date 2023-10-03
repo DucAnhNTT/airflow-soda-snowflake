@@ -33,8 +33,10 @@ What you need to run the project:
 - The DAG we create;
 ![](./image/DAG-Airflow.png)
 
-Your Astro project contains the following files and folders:
 
+
+Your Astro project contains the following files and folders:
+![](./image/tree-folder.png)
 - dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes two example DAGs:
     - `example_dag_basic`: This DAG shows a simple ETL data pipeline example with three TaskFlow API tasks that run daily.
     - `example_dag_advanced`: This advanced DAG showcases a variety of Airflow features like branching, Jinja templates, task groups and several Airflow operators.
