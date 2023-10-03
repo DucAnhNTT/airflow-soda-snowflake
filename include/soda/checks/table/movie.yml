@@ -1,4 +1,4 @@
-check for movie:
+checks for movie:
   - schema:
       fail:
         when wrong column type:
@@ -11,3 +11,24 @@ check for movie:
       name: Ensure that all ratings are valid
       valid min: 0
       valid max: 10
+# table_name: movie
+# metrics:
+#   - row_count
+#   - duplicate_count
+#   - missing_count
+#   - invalid_count
+# columns:
+#   Budget:
+#     valid_format: number
+#     tests:
+#       - not missing
+#   Title:
+#     tests:
+#       - unique
+#       - not missing
+#   Rating:
+#     valid_min: 0
+#     valid_max: 10
+#     tests:
+#       - not missing
+#       - valid_values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

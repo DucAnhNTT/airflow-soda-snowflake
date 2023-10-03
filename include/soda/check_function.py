@@ -17,6 +17,7 @@ def check(scan_name, checks_subpath=None, data_source= 'snowflake_db', project_r
 
     result = scan.execute() 
     print(scan.get_logs_text())
+    
     if result != 0:
         raise ValueError('Soda Scan failed')
     
