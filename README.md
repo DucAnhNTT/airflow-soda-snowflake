@@ -1,5 +1,5 @@
 # Movie recommend data pipeline with Azure
-This is a mini project to get hands on Airflow, Soda for quality checks, and Snowflake for storage
+This project is designed to provide practical experience with Airflow for workflow management, Soda for data quality checks, and Snowflake for secure and efficient data storage.
 
 ### Table of contents
 
