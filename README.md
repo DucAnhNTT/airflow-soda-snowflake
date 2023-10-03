@@ -1,4 +1,4 @@
-# Movie recommend data pipeline with Azure
+# Data Pipeline Management with Airflow, Soda, and Snowflake
 This project is designed to provide practical experience with Airflow for workflow management, Soda for data quality checks, and Snowflake for secure and efficient data storage.
 
 ### Table of contents
@@ -15,17 +15,24 @@ This project is designed to provide practical experience with Airflow for workfl
 ![](./image/Slide2.PNG)
 
 ## Overview
-*  the data we ingest from http to snowflake then use soda for quality check that data, and then take top 10 movie and then run soda quality check again 
+* In this project, we ingest data from HTTP to Snowflake, subsequently utilizing Soda for data quality checks. Following this, we extract the top 10 movies and perform another round of quality checks using Soda.
 
 <!-- PREREQUISITES -->
 ## Prerequisites
 What you need to run the project:
-- [Docker](https://azure.microsoft.com/en-us/)..Hightly recommend v4.22.1 or above
+- [Docker](https://azure.microsoft.com/en-us/) Hightly recommend v4.22.1 or above
 - The Astro CLI is a command-line interface for data orchestration. It allows you to get started with Apache Airflow quickly and it can be used with all Astronomer products.
 - Astro SDK allows rapid and clean development of {Extract, Load, Transform} workflows using Python and SQL, powered by Apache Airflow.
 - Soda Core is an open source framework for checking data quality. It uses the Soda Checks Language (SodaCL) to run checks defined in a YAML file. Soda Core lets you: Define checks as YAML configuration, including many preset checks.
 
 ## Project Contents
+- Docker: There 4 containers which have airflow's services
+![](./image/docker-consume.png)
+- Airflow Webserver: 
+![](./image/airflow-UI.png)
+- The DAG we create;
+![](./image/DAG-Airflow.png)
+
 Your Astro project contains the following files and folders:
 
 - dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes two example DAGs:
