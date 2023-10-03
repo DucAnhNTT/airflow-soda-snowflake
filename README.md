@@ -1,11 +1,31 @@
-Overview
-========
+# Movie recommend data pipeline with Azure
+This is a mini project to get hands on Airflow, Soda for quality checks, and Snowflake for storage
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+### Table of contents
 
-Project Contents
-================
+* [Architecture diagram](#architecture-diagram)
+* [Overview](#overview)
+* [Running project](#running-project)
+* [Project Content](#project-content)
+* [Prerequisites](#prerequisites)
+* [Contact](#contact)
 
+## Architecture diagram
+
+![](./image/Slide2.PNG)
+
+## Overview
+*  the data we ingest from http to snowflake then use soda for quality check that data, and then take top 10 movie and then run soda quality check again 
+
+<!-- PREREQUISITES -->
+## Prerequisites
+What you need to run the project:
+- [Docker](https://azure.microsoft.com/en-us/)..Hightly recommend v4.22.1 or above
+- The Astro CLI is a command-line interface for data orchestration. It allows you to get started with Apache Airflow quickly and it can be used with all Astronomer products.
+- Astro SDK allows rapid and clean development of {Extract, Load, Transform} workflows using Python and SQL, powered by Apache Airflow.
+- Soda Core is an open source framework for checking data quality. It uses the Soda Checks Language (SodaCL) to run checks defined in a YAML file. Soda Core lets you: Define checks as YAML configuration, including many preset checks.
+
+## Project Contents
 Your Astro project contains the following files and folders:
 
 - dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes two example DAGs:
@@ -18,9 +38,10 @@ Your Astro project contains the following files and folders:
 - plugins: Add custom or community plugins for your project to this file. It is empty by default.
 - airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
 
-Deploy Your Project Locally
-===========================
 
+
+<!-- RUNNING PROJECT -->
+## Running project
 1. Start Airflow on your local machine by running 'astro dev start'.
 
 This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
@@ -38,12 +59,12 @@ Note: Running 'astro dev start' will start your project with the Airflow Webserv
 
 You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
 
-Deploy Your Project to Astronomer
-=================================
+<!-- CONTACT -->
+## Contact
+Please feel free to contact me if you have any questions.
+<a href="https://ducanh0285@gmail.com" target="blank"><img align="center" src="https://img.icons8.com/color/48/000000/gmail--v2.png" alt="ducanh0285@gmail.com" height="30" width="40" /></a><a href="https://www.facebook.com/ducanh.pp" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="1" height="30" width="40" /></a><a href="https://twitter.com/Ducann02Nguyen" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="1" height="30" width="40" /></a><a href="https://www.linkedin.com/in/ducanhnt/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="1" height="30" width="40" /></a>
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://docs.astronomer.io/cloud/deploy-code/
 
-Contact
-=======
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+
+
